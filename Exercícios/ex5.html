@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+
+    <style>
+
+        body {
+            font-size: 16px;
+            font-family: 'Arial';
+        }
+         
+    </style>
+</head>
+<body>
+    
+    <h1>Olá, mundo!</h1>
+    <p>Aprendendo sobre DOM, no Curso em Vídeo</p>
+    <p>Brunaaaa</p>
+
+    <script>
+
+
+        var corpo = document.body
+        corpo.style.background = 'orange' // faz o msm que o de baixo
+        // ou seja, atribui o body à var corpo 
+        // e altero a cor do fundo pelo próprio JS
+
+
+        var msg =  document.getElementsByTagName('p')[1] // com o [0], vai pegar somente o primeiro p
+        document.write("Está escrito: " + msg.innerHTML) // pega e escreve no corpo a frase + a var toda
+        //msg.innerText irá pegar só o texto, caso tenha alguma palavra com
+        //a tag strong, por ex, não vai pegar
+        msg.style.color = 'brown'
+
+        //posso também mudar tudo em tempo real, veja:
+
+        // msg.innerText = 'mudando...' >> esse código muda o que
+        //está escrito na var
+
+        //msg.style.background = 'red' >> esse código muda a cor de fundo
+
+
+    </script>
+</body>
+</html>
