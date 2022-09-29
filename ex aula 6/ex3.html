@@ -33,8 +33,23 @@
 
     <script>
 
-        var nome = prompt("Qual seu nome?") // Vai perguntar o nome
-        alert("Prazer, " + nome + ".") // O sinal de + tem função de concatenação (juntar as duas coisas)
+        var n1 = Number(prompt("Digite um número:"))
+        var n2 = Number(prompt("Digite outro número:")) 
+        // o parseFloat é pra numeros reais (numeros inteiro, quebrados etc) > TEM QUE USAR PONTO PRA Nº QUEBRADO, NÃO VÍRGULA
+        // o parseInt é para numeros inteiros 
+
+        // Hoje, você pode usar só o NUMBER() e o próprio programa saberá qual é o tipo de número
+
+        // Em caso de STRING, para a conversão basta colocar String() ou n.toString()
+
+        var soma = n1 + n2
+
+        alert("A soma dos dois números é " + soma) 
+        // o sinal de + pode ser ou pra concatenação (no caso de strigngs) 
+        // ou adição (para numbers)
+
+        // Para que seja adição, quando receber respostas no prompt (que recebe obrigatóriamente STRINGS)
+        // é preciso declarar que as variáveis recebidas são NUMBERS
 
     </script>
 </body>
