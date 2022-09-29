@@ -10,8 +10,10 @@
 
         body {
 
-            background-color: #313172c1;
+            background-color: #313172c1; /** Cor de fundo **/
             color: #ffffff;
+            font-family: 'Arial';
+            font-size: 20px;
 
         }
 
@@ -20,12 +22,20 @@
 </head>
 <body>
     
-    <h1>Olá, mundo!</h1>
+    <h1>Olá, mundo!</h1> <!-- Título -->
 
     <p>Já me livrei da maldição.</p>
 
 
 
 
+
+
+    <script>
+
+        var nome = prompt("Qual seu nome?") // Vai perguntar o nome
+        alert("Prazer, " + nome + ".") // O sinal de + tem função de concatenação (juntar as duas coisas)
+
+    </script>
 </body>
 </html>
