@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 004</title>
+
+    <style>
+
+        body {
+            font-size: 16px;
+            font-family: 'Arial';
+        }
+         
+    </style>
+</head>
+<body>
+    
+
+    <script>
+
+        var nome = prompt("Digite sue nome:")
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras. <br>`)
+        document.write(`Esse é seu nome em maiusculo: <strong>${nome.toUpperCase()}</strong> <br>`)
+        document.write(`Esse é seu nome em minusculo: <strong>${nome.toLowerCase()}</strong> <br>`)
+
+        //Demostrando o uso do length e maisc minus.
+
+        //OUTRAS ANOTAÇÕES:
+        // n.toFixed() >> serve para fixar algum number, ex.: 9.9, com o toFixed(2) ficará 9.90
+
+        // n.toFixed(1).replace('.', ',') >> fará o que foi dito cima e mudará o sinal . para , > ex.: 9,9
+
+        // n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) >> vai transformar um NUMBER em 
+        // nº para a moeda brasileira. ex.: 80 >> R$80,00 
+        // INTERESSANTE ^^ 
+
+    </script>
+</body>
+</html>
