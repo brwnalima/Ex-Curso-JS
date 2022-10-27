@@ -49,14 +49,6 @@
             background-color: black;
             color: aliceblue;
         }
-
-        .res {
-            text-align: center;
-            font-size: 16px;
-            font-weight: 200px;
-            margin-top: 6px;
-        }
-
     </style>
 </head>
 
@@ -68,29 +60,20 @@
         <h3>Sua velocidade</h3>
         <input type="number" placeholder="Vel. Km/H" id="velo">
         <button type="button" value="verificar" id="btnEnviar">Enviar</button>
-        <div class="res">
-
-        </div>
     </div>
-
-    
 
     <script>
 
         //Nesse ex. eu usei o EVENTO, mas dá pra fazer com o onclick+function
 
-        let inputTxt = document.querySelector("#velo")
+        let vel = document.querySelector("#velo")
         let btn = document.querySelector("#btnEnviar")
-        let result = document.querySelector(".res")
 
-        btn.addEventListener("click", function (evento) {
+        btn.addEventListener("click", function (event) {
 
-            if (inputTxt.value > 60 ) {
-                alert("MULTADO!")
-                result.innerHTML = "Dirija com segurança."
+            if (vel > 60 ) {
+                alert("MULTADO! Dirija com segurança.")
                 
-            } else if (inputTxt.value === "") {
-                alert("Favor inserir sua velocidade correta para a análise.")
             } else {
                 alert("Você está dentro do limite exigido. Siga assim!")
             }
