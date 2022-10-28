@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,6 @@
     <title>Hora do Dia</title>
 
     <style>
-
         body {
             font-family: 'Arial';
             margin: auto;
@@ -38,21 +38,47 @@
 
         .mini-container {
             padding: 5px;
-            
+
         }
 
         footer {
             font-size: 12px;
             color: transparent;
             text-shadow: 2px 2px #00000062;
-            
+
         }
 
-        @media screen (min-width 700px) {
-            
+        @media screen and (max-width: 800px) {
+
+            header {
+                margin-top: 80px;
+                font-size: 25px;
+                text-shadow: 2px 2px #00000060;
+            }
+
+            section {
+                width: 90%;
+                height: 300px;
+                margin-top: 90px;
+            }
+
         }
 
-        
+        @media screen and (max-width: 500px) {
+
+            header {
+                margin-top: 80px;
+                font-size: 25px;
+                text-shadow: 2px 2px #00000060;
+            }
+
+            section {
+                width: 90%;
+                height: 300px;
+                margin-top: 90px;
+            }
+
+        }
     </style>
 </head>
 
@@ -62,7 +88,7 @@
     <header>
         <h1>Hora do dia</h1>
     </header>
-    
+
     <section>
 
         <div class="mini-container">
@@ -70,13 +96,15 @@
         </div>
 
         <div id="foto">
-            <img id="imagem" src="https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg" alt="clima do dia">
+            <img id="imagem" src="https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg"
+                alt="clima do dia">
         </div>
     </section>
 
     <footer>
         <p>@2022 Brwnalima</p>
     </footer>
+
 
 
     <script>
@@ -87,23 +115,23 @@
         let foto = document.querySelector("#imagem")
         let principal = document.querySelector("section")
 
-
         if (hora > 6 && hora < 12) {
-            frase.innerHTML= `Agora são ${hora} horas e ${min} minutos.`
+            frase.innerHTML = `Agora são ${hora} horas e ${min} minutos.`
             foto.setAttribute('src', "https://img.freepik.com/fotos-premium/linda-manha-paisagem-nascer-do-sol-na-natureza-nascer-do-sol_506085-374.jpg")
-            
-            
+
+
 
         } else if (hora > 12 && hora < 19) {
-            frase.innerHTML= `Agora são ${hora} horas e ${min} minutos.`
+            frase.innerHTML = `Agora são ${hora} horas e ${min} minutos.`
             foto.setAttribute('src', "https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg")
             principal.style.backgroundColor = '#cfab68e7'
 
         } else {
-            frase.innerHTML= `Agora são ${hora} horas e ${min} minutos.`
+            frase.innerHTML = `Agora são ${hora} horas e ${min} minutos.`
             foto.setAttribute('src', "https://i0.hippopx.com/photos/378/644/940/nature-night-silhouette-sky-preview.jpg")
             principal.style.backgroundColor = '#cdcef1e7'
         }
     </script>
 </body>
+
 </html>
