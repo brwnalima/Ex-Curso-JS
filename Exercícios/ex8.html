@@ -11,7 +11,7 @@
         body {
             font-family: 'Arial';
             margin: auto;
-            background-color: beige;
+            background-color: rgb(247, 247, 244);
             text-align: center;
         }
 
@@ -21,7 +21,7 @@
         }
 
         section {
-            width: 50%;
+            width: 30%;
             height: 300px;
             margin: auto;
             margin-bottom: 20px;
@@ -33,7 +33,6 @@
         #foto img {
             border-radius: 10000000000000000000000%;
             width: 300px;
-            
             padding: 10px;
         }
 
@@ -46,6 +45,11 @@
             font-size: 12px;
             color: transparent;
             text-shadow: 2px 2px #00000062;
+            
+        }
+
+        @media screen (min-width 700px) {
+            
         }
 
         
@@ -66,7 +70,7 @@
         </div>
 
         <div id="foto">
-            <img src="https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg" alt="clima do dia">
+            <img id="imagem" src="https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg" alt="clima do dia">
         </div>
     </section>
 
@@ -74,18 +78,32 @@
         <p>@2022 Brwnalima</p>
     </footer>
 
+
     <script>
         let agora = new Date()
         let hora = agora.getHours()
         let min = agora.getMinutes()
         let frase = document.querySelector("#text")
+        let foto = document.querySelector("#imagem")
+        let principal = document.querySelector("section")
+
 
         if (hora > 6 && hora < 12) {
             frase.innerHTML= `Agora são ${hora} horas e ${min} minutos.`
-        } else {
+            foto.setAttribute('src', "https://img.freepik.com/fotos-premium/linda-manha-paisagem-nascer-do-sol-na-natureza-nascer-do-sol_506085-374.jpg")
             
-        }
+            
 
+        } else if (hora > 12 && hora < 19) {
+            frase.innerHTML= `Agora são ${hora} horas e ${min} minutos.`
+            foto.setAttribute('src', "https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg")
+            principal.style.backgroundColor = '#cfab68e7'
+
+        } else {
+            frase.innerHTML= `Agora são ${hora} horas e ${min} minutos.`
+            foto.setAttribute('src', "https://i0.hippopx.com/photos/378/644/940/nature-night-silhouette-sky-preview.jpg")
+            principal.style.backgroundColor = '#cdcef1e7'
+        }
     </script>
 </body>
 </html>
