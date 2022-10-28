@@ -31,10 +31,15 @@
         }
 
         #foto img {
-
             border-radius: 10000000000000000000000%;
             width: 300px;
-            margin-top: 20px;
+            
+            padding: 10px;
+        }
+
+        .mini-container {
+            padding: 5px;
+            
         }
 
         footer {
@@ -55,11 +60,11 @@
     </header>
     
     <section>
-        <div id="texto">
-            <h3> </h3>
 
+        <div class="mini-container">
+            <h3 id="text">nada</h3>
         </div>
-            
+
         <div id="foto">
             <img src="https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg" alt="clima do dia">
         </div>
@@ -73,10 +78,10 @@
         let agora = new Date()
         let hora = agora.getHours()
         let min = agora.getMinutes()
-        let frase = document.getElementsByTagName(h3)
+        let frase = document.querySelector("#text")
 
         if (hora > 6 && hora < 12) {
-            frase.innerText(`Agora são ${hora} horas e ${min} minutos.`)
+            frase.innerHTML= `Agora são ${hora} horas e ${min} minutos.`
         } else {
             
         }
