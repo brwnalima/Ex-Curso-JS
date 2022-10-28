@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- EXERCÍCIO - COLOQUEI O JS E O CSS NO MESMO ARQUIVO PRA OTIMIZAR -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hora do Dia</title>
 
+
+    <!-- CSS -->
     <style>
         body {
             font-family: 'Arial';
@@ -48,6 +51,7 @@
 
         }
 
+        /* RESPONSIVIDADE */
         @media screen and (max-width: 800px) {
 
             header {
@@ -80,19 +84,23 @@
 
         }
     </style>
+    <!-- FIM CSS -->
+
 </head>
 
 
 <body>
-
+    <!-- CABEÇALHO -->
     <header>
         <h1>Hora do dia</h1>
     </header>
 
+    <!-- PARTE PRINCIPAL DO SITE -->
     <section>
 
         <div class="mini-container">
             <h3 id="text">nada</h3>
+            <!-- frase aleatória, só para não ficar vazio. essa frase não vai aparecer em momento nenhum por conta do javascript -->
         </div>
 
         <div id="foto">
@@ -101,14 +109,15 @@
         </div>
     </section>
 
+    <!-- RODAPÉ -->
     <footer>
         <p>@2022 Brwnalima</p>
     </footer>
 
 
-
+    <!-- JAVASCRIPT -->
     <script>
-        let agora = new Date()
+        let agora = new Date() // new (construtor) Date() (método para pegar coisas em tempo real como hora, minuto, dia...)
         let hora = agora.getHours()
         let min = agora.getMinutes()
         let frase = document.querySelector("#text")
@@ -118,20 +127,25 @@
         if (hora > 6 && hora < 12) {
             frase.innerHTML = `Agora são ${hora} horas e ${min} minutos.`
             foto.setAttribute('src', "https://img.freepik.com/fotos-premium/linda-manha-paisagem-nascer-do-sol-na-natureza-nascer-do-sol_506085-374.jpg")
-
-
+            // se for horário entre 6 até 12 da tarde, é considerado de manhã.
 
         } else if (hora > 12 && hora < 19) {
             frase.innerHTML = `Agora são ${hora} horas e ${min} minutos.`
             foto.setAttribute('src', "https://www.lg.com/pt/lg-experience/images/pt-pt/sunset-praias-img1.jpg")
             principal.style.backgroundColor = '#cfab68e7'
+            // se for horário entre 12 até 19 da noite, é considerado de tarde.
 
         } else {
             frase.innerHTML = `Agora são ${hora} horas e ${min} minutos.`
             foto.setAttribute('src', "https://i0.hippopx.com/photos/378/644/940/nature-night-silhouette-sky-preview.jpg")
             principal.style.backgroundColor = '#cdcef1e7'
+            // se for horário entre 19 até 00h, é considerado de noite.
         }
+
     </script>
+    <!-- FIM DO JAVASCRIPT -->
+
+
 </body>
 
 </html>
