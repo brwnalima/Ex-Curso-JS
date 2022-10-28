@@ -68,5 +68,19 @@
     <footer>
         <p>@2022 Brwnalima</p>
     </footer>
+
+    <script>
+        let agora = new Date()
+        let hora = agora.getHours()
+        let min = agora.getMinutes()
+        let frase = document.getElementsByTagName(h3)
+
+        if (hora > 6 && hora < 12) {
+            frase.innerText(`Agora são ${hora} horas e ${min} minutos.`)
+        } else {
+            
+        }
+
+    </script>
 </body>
 </html>
