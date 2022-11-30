@@ -39,6 +39,7 @@
         button {
             width: 200px;
             height: 80px;   
+            cursor: pointer;
         }
 
         button:hover {
@@ -50,7 +51,7 @@
     </style>
 </head>
 <body>
-    <!-- Criar uma interface onde após clicar no botão desafio, o usuário vai responder o nome e sua idade e no final aparece um alert falando que conheceu tal pessoa -->
+    <!-- Criar uma interface onde após clicar no botão desafio, o usuário vai responder um número, e o alert vai retornar o numero, seu antecessor e seu sucessor. -->
 
     
 
@@ -69,17 +70,15 @@
     <script> 
     
     const Click = () => {
-        let num = prompt("Digite um número:")
-        
-        ant = num - 1
-        suc = num + 1
+        let frase = prompt("Digite um número:")
 
-        alert(`O número escolhido é ${num}.
-        O seu antecessor é ${ant} e o seu sucessor p`)
+        let num = parseInt(frase)
+        
+        let ant = num - 1
+        let suc = num + 1
+        alert(`O número escolhido é ${num}. O seu antecessor é ${ant} e o seu sucessor é ${suc}.`)
         
     }
-    
-
 
     </script>
 </body>
