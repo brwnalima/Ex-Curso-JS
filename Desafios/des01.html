@@ -5,19 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Um</title>
+
+    <style>
+        h1 {
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 40px;
+            background:#5870da;
+            width: 500px;
+            height: 100px;
+            margin: auto;
+            border-radius: 9px;
+            box-shadow: 4px 5px rgba(0, 0, 0, 0.836);
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;   
+        }
+
+        button:hover {
+            font-size: 16px;
+            background-color: black;
+            color: #f0f0f0;
+        }
+
+    </style>
 </head>
 <body>
     <!-- Criar 3 botões e quando clicados, cada um aparecer um alert com uma mensagem -->
 
+    <h1>Escolha um botão abaixo:</h1>
+
     <section class="container">
-        <h1>Escolha um botão abaixo:</h1>
+        
         <div class="container-item">
-            <button class="btnUm">Botão Um</button></div>
+            <button class="btnUm" onclick="ClicarUm()">Botão Um</button></div>
         <div class="container-item">
-            <button class="btnDois">Botão Dois</button></div>
+            <button class="btnDois" onclick="ClicarDois()">Botão Dois</button></div>
         <div class="container-item">
-            <button class="btnTres">Botão Três</button></div>
+            <button class="btnTres" onclick="ClicarTres()">Botão Três</button></div>
     </section>
-    <script> </script>
+
+
+    <script> 
+    
+    const ClicarUm = () => {
+        alert("Você clicou o primeiro botão.")
+    }
+    const ClicarDois = () => {
+        alert("Você clicou o segundo botão.")
+    }
+    const ClicarTres = () => {
+        alert("Você clicou o terceiro botão.")
+    }
+
+
+    </script>
 </body>
 </html>
