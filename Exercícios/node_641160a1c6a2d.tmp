@@ -1,2 +1,0 @@
-let hora = 8
-console.log(`Agora são ${hora} horas`)
